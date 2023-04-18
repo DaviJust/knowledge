@@ -1,4 +1,5 @@
-const app = ("express")
+const app = require("express") ()
+
 
 app.listen(3004, () =>
-console.log('Backend executando'))
+console.log('Backend executando')) 
