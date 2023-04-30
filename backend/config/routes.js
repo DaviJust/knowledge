@@ -21,7 +21,7 @@ module.exports = app => {
         .get(app.api.article.get)
         .post(app.api.article.save)
 
-    .app.route('/articles/:id')
+    app.route('/articles/:id')
         .get(app.api.article.getById)
         .put(app.api.article.save)
         .delete(app.api.article.remove)
