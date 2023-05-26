@@ -6,7 +6,6 @@ module.exports = {
             SELECT c.id FROM subcategories, categories c
                 WHERE "parentId" = subcategories.id
         )
-            SELECT id FROM subcategories
-
+        SELECT id FROM subcategories
     `
 }
