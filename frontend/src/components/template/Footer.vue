@@ -2,7 +2,8 @@
     <footer class="footer">
         <span>Copyright <strong>Cod3r</strong> © 2015-2018</span>
     </footer>
-  </template>
+</template>
+
 <script>
 export default {
     name: "Footer"
