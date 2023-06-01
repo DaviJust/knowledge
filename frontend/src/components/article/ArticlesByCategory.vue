@@ -1,5 +1,6 @@
     <template>
         <div class="articles-by-category">
+            <!-- pageTitle é a fragmentação e dentro do :main é o túnel que pega a informação específica -->
             <PageTitle icon="fa fa-folder-o"
                 :main="category.name" sub="Categoria" />
             <ul>

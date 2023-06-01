@@ -1,11 +1,14 @@
 <template>
+    <!-- Componente para exibir o artigo com base no ID -->
     <div class="article-by-id">
+        <!-- Componente PageTitle com ícone, título principal e subtitulo, pageTitle é a fragmentação e dentro do :main é o túnel que pega a informação específica -->
         <PageTitle icon="fa fa-file-o" :main="article.name" :sub="article.description" />
         <div class="article-content" v-html="article.content"></div>
     </div>
 </template>
 
 <script>
+// Importação de bibliotecas e componentes
 import 'highlightjs/styles/dracula.css'
 import hljs from 'highlightjs/highlight.pack.js'
 import { baseApiUrl } from '@/global'
@@ -21,10 +24,12 @@ export default {
         }
     },
     mounted() {
+        // Requisição para obter o artigo com base no ID
         const url = `${baseApiUrl}/articles/${this.$route.params.id}`
         axios.get(url).then(res => this.article = res.data)
     },
     updated() {
+        // Destaque de sintaxe para elementos <pre> com a classe "ql-syntax"
         document.querySelectorAll('.article-content pre.ql-syntax').forEach(e => {
             hljs.highlightBlock(e)
         })
@@ -33,6 +38,7 @@ export default {
 </script>
 
 <style>
+    /* Estilos do componente */
     .article-content {
         background-color: #FFF;
         border-radius: 8px;
